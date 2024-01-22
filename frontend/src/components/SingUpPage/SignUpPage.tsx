@@ -19,7 +19,7 @@ const SignUpPage = () => {
   const onSubmit = async (payload: FieldValues) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/register`,
+        `https://auth-app-production.up.railway.app/register`,
         payload
       );
 
