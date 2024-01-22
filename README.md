@@ -45,6 +45,8 @@ Make sure you have the following installed on your machine:
         ```
         The backend server will be running on http://localhost:8081.
 
+      Note that I have also added an exported copy of my DB. named as `authapp.sql`
+
 4. Installing and running the Frontend:
     - Navigate to the frontend directory:
         ```bash
