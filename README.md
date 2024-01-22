@@ -5,12 +5,8 @@ Brief project description here.
 ## Table of Contents
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Running the Backend](#running-the-backend)
-- [Running the Frontend](#running-the-frontend)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
+- [Installing and running the Backend](#installing-and-running-the-backend)
+- [Installing and running the Frontend](#installing-and-running-the-frontend)
 
 ## Getting Started
 
