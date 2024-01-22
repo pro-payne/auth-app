@@ -1,0 +1,34 @@
+ .home-wrapper {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     border-radius: 0;
+     height: 100%;
+     width: 100%;
+     background: url(https://213255.fs1.hubspotusercontent-na1.net/hubfs/213255/1.%20Huble%20Digital/WEBSITE%20ELEMENTS/Background@2x.png) no-repeat fixed 50%;
+     background-size: cover;
+     -webkit-background-size: cover;
+
+     .welcome-message {
+         font-size: 22px;
+         font-weight: 400;
+         color: #33475b;
+         margin-bottom: 10px;
+     }
+
+
+     .logout-button {
+         padding: 10px;
+
+         >button {
+             height: 37px;
+             background-color: #ff4d56;
+             color: #fff;
+             font-size: 14px;
+             cursor: pointer;
+             border: none;
+         }
+     }
+
+ }
