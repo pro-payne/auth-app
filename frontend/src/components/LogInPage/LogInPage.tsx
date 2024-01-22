@@ -17,8 +17,8 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const onSubmit = async (payload: FieldValues) => {
-    try {
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, payload);
+    try {      
+      const response = await axios.post(`https://auth-app-production.up.railway.app/login`, payload);
 
       const { success, data, error } = response.data;
 

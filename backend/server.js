@@ -3,13 +3,19 @@ const mysql = require("mysql2");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
 
-require('dotenv').config()
+require("dotenv").config();
 
 const { authMiddleware } = require("./middlewares/auth");
 const { User } = require("./models/user");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.post("/register", authMiddleware, async (req, res) => {
@@ -85,10 +91,7 @@ app.post("/login", async (req, res) => {
       });
     }
 
-    const compare = await bcrypt.compare(
-      password,
-      checkAccount.password
-    );
+    const compare = await bcrypt.compare(password, checkAccount.password);
 
     if (!compare) {
       return res.status(400).json({
@@ -103,7 +106,7 @@ app.post("/login", async (req, res) => {
         id: checkAccount.id,
         fullName: checkAccount.fullname,
         email,
-        registeredDate: checkAccount.created_at
+        registeredDate: checkAccount.created_at,
       },
     });
   } catch (error) {
