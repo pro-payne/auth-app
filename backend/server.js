@@ -2,6 +2,9 @@ const express = require("express");
 const mysql = require("mysql2");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
+
+require('dotenv').config()
+
 const { authMiddleware } = require("./middlewares/auth");
 const { User } = require("./models/user");
 
