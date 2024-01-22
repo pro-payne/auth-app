@@ -18,6 +18,12 @@ app.use(
 );
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+  });
+});
+
 app.post("/register", authMiddleware, async (req, res) => {
   try {
     const { fullName, password, email: inputEmail } = req.body;
