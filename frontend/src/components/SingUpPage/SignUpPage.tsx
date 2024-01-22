@@ -19,7 +19,7 @@ const SignUpPage = () => {
   const onSubmit = async (payload: FieldValues) => {
     try {
       const response = await axios.post(
-        "http://localhost:8081/register",
+        `${process.env.REACT_APP_BACKEND_URL}/register`,
         payload
       );
 

@@ -18,7 +18,7 @@ const LoginPage = () => {
 
   const onSubmit = async (payload: FieldValues) => {
     try {
-      const response = await axios.post("http://localhost:8081/login", payload);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, payload);
 
       const { success, data, error } = response.data;
 
